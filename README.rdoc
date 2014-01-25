@@ -25,3 +25,11 @@ Instagram:
 >bin/rake db:migrate
 #update db
 >bin/rake db:migrate RAILS_ENV=test
+
+>bin/rails g migration AddContentToPosts content:text
+
+>bin/rails g controller comments
+>bin/rails g model Comment text:text
+
+>bin/rails g migration AddPostIdToComments Post:belongs_to
+

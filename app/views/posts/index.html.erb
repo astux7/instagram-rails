@@ -1,5 +1,6 @@
 <% @posts.each do |post| %>
   <h1><%= post.title %></h1>
+  <p><%= post.content %></p>
   <%= link_to 'Edit post', edit_post_path(post) %>
   <%= link_to 'Delete post', post_path(post), method: :delete %>
   <%= link_to 'Add a comment', new_post_comment_path(post) %>
