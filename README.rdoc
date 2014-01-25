@@ -11,3 +11,17 @@ Instagram:
 #gemfile and make ready tdd
 >bin/rails generate rspec:install
 #spec_helper update
+
+#add routes ./config/routes.rb
+>bin/rake routes
+
+#generate controler and model Post
+#add controller
+>bin/rails g controller posts
+#add view, add action
+
+#generate a model
+>bin/rails g model Post title:string
+>bin/rake db:migrate
+#update db
+>bin/rake db:migrate RAILS_ENV=test
