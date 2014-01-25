@@ -1,4 +1,13 @@
 Instagram:
 
-> added git ignore file  '.gitignore'
+>rails new instagram -d postgresql -T
+# added git ignore file  '.gitignore'
 
+#add to ./config/database.yml changes
+>bin/rake db:create
+#creates a db
+>bin/rake db:migrate
+
+#gemfile and make ready tdd
+>bin/rails generate rspec:install
+#spec_helper update
