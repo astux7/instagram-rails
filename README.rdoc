@@ -33,3 +33,9 @@ Instagram:
 
 >bin/rails g migration AddPostIdToComments Post:belongs_to
 
+#added twitter bootstrap & devise gem to gemfile edit routes file
+#if u get error not recognize - reopen bash shell window
+rails generate divise:install
+>rails g devise user
+>bin/rake db:migrate
+>bin/rake db:migrate RAILS_ENV=test
