@@ -39,3 +39,54 @@ rails generate divise:install
 >rails g devise user
 >bin/rake db:migrate
 >bin/rake db:migrate RAILS_ENV=test
+
+
+#Paper clip for img upload add the gem peperclip 2MB max
+#(parent model -> post and attached image)
+rails g paperclip post image
+bin/rake db:migrate
+
+#need to install MAgic
+#not worked - brew install imagemagick
+gem install rmagick
+
+
+`brew link libtool jpeg libpng
+
+unknown:instagram astux7$  /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
+curl: (22) The requested URL returned error: 404
+unknown:instagram astux7$ brew
+Example usage:
+  brew [info | home | options ] [FORMULA...]
+  brew install FORMULA...
+  brew uninstall FORMULA...
+  brew search [foo]
+  brew list [FORMULA...]
+  brew update
+  brew upgrade [FORMULA...]
+  brew pin/unpin [FORMULA...]
+
+Troubleshooting:
+  brew doctor
+  brew install -vd FORMULA
+  brew [--env | --config]
+
+Brewing:
+  brew create [URL [--no-fetch]]
+  brew edit [FORMULA...]
+  open https://github.com/Homebrew/homebrew/wiki/Formula-Cookbook
+
+Further help:
+  man brew
+  brew home
+unknown:instagram astux7$ brew install imagemagick
+Warning: It appears you have MacPorts or Fink installed.
+Software installed with other package managers causes known problems for
+Homebrew. If a formula fails to build, uninstall MacPorts/Fink and try again.
+Error: You must `brew link libtool jpeg libpng' before imagemagick can be installed
+unknown:instagram astux7$ brew link libtool jpeg libpng
+Linking /usr/local/Cellar/libtool/2.4.2... Warning: Could not link libtool. Unlinking...
+
+Error: Could not symlink file: /usr/local/Cellar/libtool/2.4.2/include/ltdl.h
+/usr/local/include is not writable. You should change its permissions.
+unknown:instagram astux7$ 

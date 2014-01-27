@@ -33,10 +33,12 @@ gem 'sdoc',          group: :doc, require: false
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/jonleighton/spring
 gem 'spring',        group: :development
-
+#for css
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
-
+#for login
 gem 'devise'
+#for upload img
+gem "paperclip", "~> 3.0"
 
 group :development, :test do
   gem 'rspec-rails'

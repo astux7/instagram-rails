@@ -60,6 +60,14 @@
       <div class="row">
         <div class="col-lg-9">
           <%= bootstrap_flash %>
+          <% [:notice, :error, :alert].each do |level| %>
+  <% unless flash[level].blank? %>
+    <div class="alert-message <%= flash_class(level) %>">
+      <a class="close" href="#">×</a>
+      <%= content_tag :p, flash[level] %>
+    </div>
+  <% end %>
+<% end %>
           <%= yield %>
         </div>
         <div class="col-lg-3">

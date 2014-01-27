@@ -1,15 +1,16 @@
 class PostsController < ApplicationController
+  #before_action :authenticate_user!, only: [:new, :update]
   def new
     @post = Post.new
     render 'new'
   end
 
   def create
-    @post = Post.new(params[:post].permit(:title,:content))
+    @post = Post.new(params[:post].permit(:title,:content,:image))
     if @post.save
       redirect_to posts_path
     else
-      reder 'new'
+      render 'new'
     end
   end
 
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find params[:id]
-    if @post.update params[:post].permit(:title,:content)
+    if @post.update params[:post].permit(:title,:content,:image)
         redirect_to posts_path
     else
         render 'edit'
