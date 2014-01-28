@@ -8,9 +8,13 @@
   <%= link_to 'Delete post', post_path(post), method: :delete %>
   <%= link_to 'Add a comment', new_post_comment_path(post) %>
 
+<% post.tags.each do |tag| %>
+  #<%= tag.name %>
+<% end %>
+
   <h2>Comments</h2>
   <% post.comments.each do |comment| %>
-    <%= comment.text %>
+   <%= comment.text %>
   <% end %>
 
 <% end %>

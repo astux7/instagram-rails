@@ -31,6 +31,8 @@ gem 'jbuilder', '~> 1.2'
 #for amazon web service
 gem 'aws-sdk'
 
+#alex heroku secret 
+#gem 'heroku-secrets', github: 'alexpeattie/heroku_secrets'
 #for heroku 
 gem 'rails_12factor', group: :production
 

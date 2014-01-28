@@ -96,4 +96,24 @@ unknown:instagram astux7$
 >bundle
 
 #to push to heroku need in gem file add this lines
+
+#alex heroku secret (or google github sensitive data)
+gem 'heroku-secrets', github: 'alexpeattie/heroku_secrets'
+#do them
+>git rm config/secrets.yml
+...
+>bin/rake heroku:secrets RAILS_ENV=production
+>heroku config
+
+#for heroku to work with rails
 #gem 'rails_12factor', group: :production
+
+#generate tag
+>bin/rails g model Tag name:string
+#after adding to model dependecy
+>bin/rails g migration CreateJoinTablePostTag post tag
+#migrate
+>rails c
+#pp Post.last.tags  (pretty output)
+
+

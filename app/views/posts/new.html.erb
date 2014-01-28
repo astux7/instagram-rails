@@ -1,9 +1,11 @@
 <%= form_for @post, { multipart: true} do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
- <%= f.label :content %>
+  <%= f.label :content %>
   <%= f.text_field :content %>
-   <%= f.label :image %>
-   <%= f.file_field :image %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.label :tag_names, 'Tags' %>
+  <%= f.text_field :tag_names %>
   <%= f.submit %>
 <% end %>
