@@ -9,7 +9,7 @@
   <%= link_to 'Add a comment', new_post_comment_path(post) %>
 
 <% post.tags.each do |tag| %>
-  #<%= tag.name %>
+  <%=link_to tag, tag_posts_path(tag) %>
 <% end %>
 
   <h2>Comments</h2>

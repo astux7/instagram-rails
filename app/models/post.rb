@@ -16,4 +16,8 @@ class Post < ActiveRecord::Base
       Tag.find_or_create_by(name: tag_names)
     end
   end
+
+  def self.for_tag_or_all(tag_id)
+    tag_id.nil? ?  all :  Tag.find(tag_id).posts
+  end
 end
