@@ -6,6 +6,6 @@
   <%= f.label :image %>
   <%= f.file_field :image %>
   <%= f.label :tag_names, 'Tags' %>
-  <%= f.text_field :tag_names %>
+  <%= f.text_field :tag_names, id: 'tag_input'%>
   <%= f.submit %>
 <% end %>
